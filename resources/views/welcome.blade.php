@@ -367,7 +367,7 @@
         <div class="col-lg-4 offset-lg-4">
           <div class="section-heading text-center">
             <h6>| O'chrashuvlar | Bajarilgan ishlar </h6>
-            <h2>Biz yaxshi bilganlarimizni siz bilan ilindik !</h2>
+            <h2>Yangiliklar</h2>
           </div>
         </div>
       </div>

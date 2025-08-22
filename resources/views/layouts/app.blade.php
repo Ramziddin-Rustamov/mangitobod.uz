@@ -44,20 +44,19 @@
     </div>
   </div>
      <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top " style="background-color: rgba(255, 244, 239, 0.8);
-  box-shadow: 11px 11px 35px -10px rgba(66, 68, 90, 1);">
+  <header id="header" class="fixed-top " style="background-color: rgba(255, 244, 239, 0.8); box-shadow: 11px 11px 35px -10px rgba(66, 68, 90, 1);">
     <div class="container d-flex align-items-center">
 
-      <h1  class="logo me-auto"><a style="color:#f35525" href="/">Mangit <br>
-        <span style="padding-left:50px">obod</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
+        <h4 class="logo me-auto"><a style="color:#f35525" href="/">Village</a></h4>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a href="{{ route('about') }}" class="{{ request()->routeIs('about') ? 'active' : '' }}">Biz haqimizda</a></li>
           <li><a href="{{ route('posts.allposts') }}" class="{{request()->routeIs('posts.allposts') ? 'active' : '' }}">Yangiliklar</a></li>
           <li><a href="{{ route('team.index') }}" class="{{request()->routeIs('team.index') ? 'active' : '' }}">Ishchi jamoa</a></li>
-          <li><a href="#">Tibbiyot Birlashmasi</a></li>
+          <li><a href="{{route('client.view.index')}}">Bizga bildirilgan fikrlar</a></li>
+
+          {{-- <li><a href="#">Tibbiyot Birlashmasi</a></li>
           <li class="dropdown">
               <a href="#">
                   <span class="#">Qo'shimcha</span>
@@ -68,7 +67,7 @@
                   <li><a href="#">48-maktab</a></li>
                   <li><a href="{{route('client.view.index')}}">Bizga bildirilgan fikrlar</a></li>
               </ul>
-          </li>
+          </li> --}}
       </ul>      
         <i class="fas fa-align-left mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -118,11 +117,11 @@
 
                     @can('shop-owner')
                     <a class="dropdown-item py-3 {{ request()->routeIs('shops.index') ? 'active' : '' }}" href="{{ route('shops.index') }}">
-                        <i class="fas fa-store text-success"></i> {{ __('Do`konlarim') }}
+                        <i class="fas fa-store text-success"></i> {{ __('Mening dukonlarim') }}
                     </a>
                     @endcan
                     <a class="dropdown-item py-3 {{ request()->routeIs('public.shops.index') ? 'active' : '' }}" href="{{ route('public.shops.index') }}">
-                      <i class="fas fa-store text-success"></i> {{ __('Do`konlar') }}
+                      <i class="fas fa-store text-success"></i> {{ __('Dukonlar') }}
                   </a>
 
                     <a class="dropdown-item py-3 {{ request()->routeIs('announcements.index') ? 'active' : '' }}" href="{{ route('announcements.index') }}">
@@ -151,9 +150,9 @@
                         <i class="fas fa-pray text-success"></i> {{ __('Ibodat vaqtlari') }}
                     </a>
 
-                    <a class="dropdown-item py-3" href="#">
+                    {{-- <a class="dropdown-item py-3" href="#">
                         <i class="fas fa-hand-holding-heart text-success"></i> {{ __(' Hayriya ') }}
-                    </a>
+                    </a> --}}
 
                     {{-- Dashboard --}}
                     @can('super-admin')
